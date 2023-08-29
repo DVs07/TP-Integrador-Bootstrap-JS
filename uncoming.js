@@ -36,7 +36,7 @@ function createCard(objeto){
     </div>
     <div class="card-footer text-end d-flex justify-content-lg-between justify-content-between border-top">
         <span>$ ${objeto.price}</span>
-        <a href="./assets/pages/details.html" class="btn btn-primary ">Details</a>                        
+        <a href="./pages/details.html" class="btn btn-primary ">Details</a>                        
     </div>
     </div>
     </div>`
