@@ -23,6 +23,14 @@ function viewCard(data, container, filter){
     //console.log(cards);
 }
 
+function viewCheckbox(container){
+    let checkboxes = "";
+    for(let i=0; i < 8; i++){
+        checkboxes += createCheckbox(i) 
+    }
+    container.innerHTML = checkboxes
+}
+
 function createCard(objeto){
     return `
     <div class="col-sm-12 col-lg-3 col-md-6 mb-3 mt-3 mb-sm-4">
@@ -40,4 +48,12 @@ function createCard(objeto){
         </div>
         </div>
     </div>`
+}
+
+function createCheckbox(){
+    return `
+    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Category</label>
+                </div>`
 }
