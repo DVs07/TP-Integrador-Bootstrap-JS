@@ -90,7 +90,7 @@ function viewCard(data, container){
     if(data.length == 0){
         container.innerHTML = `
         <div class="container text-center mt-4">
-        <img src="https://media.giphy.com/media/ovBZ992Uv0StO/giphy.gif">
+        <img class="img-fluid" src="https://media.giphy.com/media/ovBZ992Uv0StO/giphy.gif">
         <h2> 🚧 No se encontraron eventos!!!
         </div>
         `
