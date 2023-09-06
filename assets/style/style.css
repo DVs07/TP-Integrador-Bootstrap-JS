@@ -23,7 +23,9 @@ a>.logo:hover{
     margin-left: 0;
     margin-right: 0;
 }
-
+h2{
+    color: white;
+}
 /* Theme Color 0 */
 .link-color{
     color: var(--theme-color-0) !important; /* th-clr-0 */
@@ -219,16 +221,12 @@ a>.logo:hover{
     background-color: var(--theme-color-4) !important;
 }
 
-
-
 main{
     min-height: 85vh;
     background-color: var(--third-color) !important;
 }
-#contact{
-    min-height: 80vh;
-}
-#stats{
+
+.mh-80vh{
     min-height: 80vh;
 }
 .carousel-item{
