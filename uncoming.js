@@ -6,16 +6,18 @@ const containerChecbox = document.getElementById("checkboxes-container");
 const inputText = document.getElementById("inputText");
 
 getData();
-viewCard(cardData, containerCard, currentDate);
-viewCheckbox(cardData, containerChecbox)
 
 containerChecbox.addEventListener("change", filterDouble);
 inputText.addEventListener("input", filterDouble);
 
 function getData(){
-    cardData = data.events;
-    currentDate = data.currentDate;
-    //console.log(cardData);
+    fetch("https://mindhub-xj03.onrender.com/api/amazing").then(response => response.json()).then(dataAPI =>
+    {   
+        dataEvents = dataAPI.events;
+        currentDate = dataAPI.currentDate;
+        viewCard(dataEvents, containerCard, currentDate);
+        viewCheckbox(dataEvents, containerChecbox);
+    });
 }
 
 function getAllCategories(arr){

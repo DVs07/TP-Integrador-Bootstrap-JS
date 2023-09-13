@@ -258,3 +258,6 @@ footer{
 .card-title, .card-text, text-body-secondary{
     color: white !important;
 }
+.card-img-bottom {
+    height: 40%;
+}

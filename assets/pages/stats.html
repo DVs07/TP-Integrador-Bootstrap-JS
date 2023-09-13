@@ -54,68 +54,46 @@
     <main class="mh-80vh">
         <div class="container pt-4">
             <table class="table table-bordered table-dark">
-            <thead>
-                <tr >
-                    <th class="thead-color" scope="col" colspan="5">Event Statics</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <tr class="table-dark">
-                    <th scope="col">Events with highest % of assistance</th>
-                    <th scope="col">Events with loweet % of assistanve</th>
-                    <th scope="col">Events with larger capacity</th>
-                </tr>
-                <tr>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-            </tbody>
-            <thead>
-                <tr>
-                    <th class="thead-color" scope="col" colspan="5">Upcoming events statics by category</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <tr>
-                    <th>Categories</th>
-                    <th>Revenues</th>
-                    <th>Porcentage of assistance</th>
-                </tr>
-                <tr>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-            </tbody>
-        </tbody>
-        <thead>
-            <tr>
-                <th class="thead-color" scope="col" colspan="5">Past events statics by category</th>
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-            <tr>
-                <th>Categories</th>
-                <th>Revenues</th>
-                <th>Porcentage of assistance</th>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-        </tbody>
+                <thead>
+                    <tr >
+                        <th class="thead-color" scope="col" colspan="5">Event Statictis</th>
+                    </tr>
+                    <tr class="table-dark">
+                        <th scope="col">Events with highest % of assistance</th>
+                        <th scope="col">Events with loweet % of assistanve</th>
+                        <th scope="col">Events with larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody id="table-data" class="table-group-divider">
+                    <!-- Event -->
+                </tbody>
+                <thead>
+                    <tr>
+                        <th class="thead-color" scope="col" colspan="5">Past events statictis by category</th>
+                    </tr>
+                    <tr  class="table-dark">
+                        <th scope="col">Categories</th>
+                        <th scope="col">Revenues</th>
+                        <th scope="col">Porcentage of assistance</th>
+                    </tr>
+                </thead>
+                <tbody id="past-table" class="table-group-divider">
+                    <!-- Past Events -->
+                    
+                </tbody>
+                <thead>
+                    <tr>
+                        <th class="thead-color" scope="col" colspan="5">Upcomning events statictis by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Porcentage of assistance</th>
+                    </tr>
+                </thead>
+                <tbody id="up-table" class="table-group-divider">
+                    <!-- Upcoming -->
+                </tbody>
             </table>
         </div>
         
@@ -142,6 +120,7 @@
             </div>
         </div>
     </footer> 
+    <script src="../../stats.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -5,39 +5,22 @@ const inputText = document.getElementById("inputText");
 // const searchBtn = document.getElementById('btnSearch')
 
 getData();
-viewCard(cardData, containerCard);
-viewCheckbox(cardData, containerChecbox);
-
-// containerChecbox.addEventListener("change", () =>{
-//     let arrayC = filterByCatagories(cardData);
-//     // console.log(arrayC);
-//     let arrayS = filterText(arrayC, inputText.value);
-//     viewCard(arrayS, containerCard);
-// });
 
 containerChecbox.addEventListener("change", filterDouble);
 inputText.addEventListener("input", filterDouble);
 
-// inputText.addEventListener("input",()=>{
-//     let arrayC = filterByCatagories(cardData);
-//     // console.log(arrayC);
-//     let arrayS = filterText(arrayC, inputText.value);
-//     // console.log(arrayS);
-//     viewCard(arrayS, containerCard);
-// });
-// searchBtn.addEventListener("click", ()=>{
-//     let arrayC = filterByCatagories(cardData);
-//     console.log(arrayC);
-//     let arrayS = search(arrayC, inputText.value);
-//     viewCard(arrayS, containerCard);
-// })
-
 //######### Get data ############
 
 function getData(){
-    cardData = data.events;
-    // checkboxCategory = data.events.category;   
-    //console.log(cardData);
+    fetch("https://mindhub-xj03.onrender.com/api/amazing").then(response => response.json()).then(dataAPI =>
+    {   
+
+        dataEvents = dataAPI.events;
+    
+        viewCard(dataEvents, containerCard);
+        viewCheckbox(dataEvents, containerChecbox);
+    });
+    
 }
 function getAllCategories(arr){
     const allCategories = arr.map(arr => arr.category)
@@ -72,11 +55,6 @@ function filterByCatagories(array){
 
     return filteredArray;
 }
-
-// function search(array, text){
-//     return array.filter(element => element.category.toLowerCase().includes(text.toLowerCase()));
-    
-// }
 
 function filterDouble(){
     let arrA = filterByCatagories(cardData);
