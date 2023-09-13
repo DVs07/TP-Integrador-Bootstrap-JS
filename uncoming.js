@@ -53,7 +53,7 @@ function filterByCatagories(array){
 }
 
 function filterDouble(){
-    let arrA = filterByCatagories(cardData);
+    let arrA = filterByCatagories(dataEvents);
     let arrB = filterText(arrA, inputText.value);
     viewCard(arrB, containerCard, currentDate)
 }
