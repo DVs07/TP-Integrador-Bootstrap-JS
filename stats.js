@@ -82,8 +82,10 @@ function getPasTable(data){
     filEstim.forEach(element => capacB += element.capacity);
     sPorB = (assisB / capacB) * 100
     rowB.porAssis = sPorB.toFixed(2);
+    if(rowB.revenues > 0){
+        uncTable.push(rowB);
+    }
     
-    uncTable.push(rowB);
 });
 viewPasTable(pasTable, pastable)
 viewPasTable(uncTable, unctable)
